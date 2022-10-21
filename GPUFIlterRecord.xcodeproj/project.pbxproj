@@ -13,6 +13,7 @@
 		1AFAAE832902EBE000521ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAAE812902EBE000521ADA /* Main.storyboard */; };
 		1AFAAE852902EBE300521ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAAE842902EBE300521ADA /* Assets.xcassets */; };
 		1AFAAE882902EBE300521ADA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAAE862902EBE300521ADA /* LaunchScreen.storyboard */; };
+		89B9661469438003EED4EC01 /* Pods_GPUFIlterRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87661CF96BA64330160A97F5 /* Pods_GPUFIlterRecord.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		1AFAAE842902EBE300521ADA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AFAAE872902EBE300521ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AFAAE892902EBE300521ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87661CF96BA64330160A97F5 /* Pods_GPUFIlterRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPUFIlterRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4C20DFBF4D51D2A97E5A4B7 /* Pods-GPUFIlterRecord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUFIlterRecord.debug.xcconfig"; path = "Target Support Files/Pods-GPUFIlterRecord/Pods-GPUFIlterRecord.debug.xcconfig"; sourceTree = "<group>"; };
+		F1D9A6A6CEA3D36BF33C0A68 /* Pods-GPUFIlterRecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUFIlterRecord.release.xcconfig"; path = "Target Support Files/Pods-GPUFIlterRecord/Pods-GPUFIlterRecord.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89B9661469438003EED4EC01 /* Pods_GPUFIlterRecord.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04B5F19449F9D28819C8458C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4C20DFBF4D51D2A97E5A4B7 /* Pods-GPUFIlterRecord.debug.xcconfig */,
+				F1D9A6A6CEA3D36BF33C0A68 /* Pods-GPUFIlterRecord.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1AFAAE6F2902EBE000521ADA = {
 			isa = PBXGroup;
 			children = (
 				1AFAAE7A2902EBE000521ADA /* GPUFIlterRecord */,
 				1AFAAE792902EBE000521ADA /* Products */,
+				04B5F19449F9D28819C8458C /* Pods */,
+				C409D169AB2B2CC06ABB6AC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = GPUFIlterRecord;
 			sourceTree = "<group>";
 		};
+		C409D169AB2B2CC06ABB6AC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87661CF96BA64330160A97F5 /* Pods_GPUFIlterRecord.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AFAAE8C2902EBE300521ADA /* Build configuration list for PBXNativeTarget "GPUFIlterRecord" */;
 			buildPhases = (
+				2B4A0EC73E48110FD0161B81 /* [CP] Check Pods Manifest.lock */,
 				1AFAAE742902EBE000521ADA /* Sources */,
 				1AFAAE752902EBE000521ADA /* Frameworks */,
 				1AFAAE762902EBE000521ADA /* Resources */,
+				C5AA8A9EA3C75873703BF01F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B4A0EC73E48110FD0161B81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GPUFIlterRecord-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5AA8A9EA3C75873703BF01F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GPUFIlterRecord/Pods-GPUFIlterRecord-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GPUFIlterRecord/Pods-GPUFIlterRecord-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GPUFIlterRecord/Pods-GPUFIlterRecord-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1AFAAE742902EBE000521ADA /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		1AFAAE8D2902EBE300521ADA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4C20DFBF4D51D2A97E5A4B7 /* Pods-GPUFIlterRecord.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,6 +365,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,6 +381,7 @@
 		};
 		1AFAAE8E2902EBE300521ADA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1D9A6A6CEA3D36BF33C0A68 /* Pods-GPUFIlterRecord.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,6 +395,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
