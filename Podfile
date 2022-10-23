@@ -4,7 +4,7 @@
 target 'GPUFIlterRecord' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-pod 'OpenCV', '3.0.0'
+pod 'OpenCV', '3.4.0'
 pod 'GPUImage'
   # Pods for GPUFIlterRecord
 

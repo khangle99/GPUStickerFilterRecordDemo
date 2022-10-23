@@ -7,16 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0EDA032904438C00E3BC59 /* NativeCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EDA022904438C00E3BC59 /* NativeCaptureViewController.swift */; };
+		1A2F1DF229040EA800503805 /* LiveVideoCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F1DF129040EA800503805 /* LiveVideoCamera.swift */; };
+		1A2F1DF529041B1000503805 /* VideoCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F1DF429041B1000503805 /* VideoCamera.m */; };
 		1AFAAE7C2902EBE000521ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAE7B2902EBE000521ADA /* AppDelegate.swift */; };
 		1AFAAE7E2902EBE000521ADA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAE7D2902EBE000521ADA /* SceneDelegate.swift */; };
 		1AFAAE802902EBE000521ADA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAE7F2902EBE000521ADA /* ViewController.swift */; };
 		1AFAAE832902EBE000521ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAAE812902EBE000521ADA /* Main.storyboard */; };
 		1AFAAE852902EBE300521ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAAE842902EBE300521ADA /* Assets.xcassets */; };
 		1AFAAE882902EBE300521ADA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAAE862902EBE300521ADA /* LaunchScreen.storyboard */; };
+		1AFAAE962902F6DB00521ADA /* model in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAAE952902F6DB00521ADA /* model */; };
+		1AFAAE982902F71200521ADA /* stickers in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAAE972902F71100521ADA /* stickers */; };
+		1AFAAE9F2903BD3B00521ADA /* GPUImageWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAE9E2903BD3B00521ADA /* GPUImageWrapper.m */; };
+		1AFAAEA22903BF9300521ADA /* GPUImageFaceWidgetComposeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEA02903BF9300521ADA /* GPUImageFaceWidgetComposeFilter.m */; };
+		1AFAAEC22903C00F00521ADA /* ATM.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEA72903C00F00521ADA /* ATM.mm */; };
+		1AFAAEC32903C00F00521ADA /* ShapeModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEA82903C00F00521ADA /* ShapeModel.cpp */; };
+		1AFAAEC42903C00F00521ADA /* myFaceAR.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEA92903C00F00521ADA /* myFaceAR.mm */; };
+		1AFAAEC52903C00F00521ADA /* CLM.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEAB2903C00F00521ADA /* CLM.mm */; };
+		1AFAAEC62903C00F00521ADA /* ShapePredictor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEAE2903C00F00521ADA /* ShapePredictor.mm */; };
+		1AFAAEC72903C00F00521ADA /* FCheck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEAF2903C00F00521ADA /* FCheck.cpp */; };
+		1AFAAEC82903C00F00521ADA /* Patch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEB02903C00F00521ADA /* Patch.cpp */; };
+		1AFAAEC92903C00F00521ADA /* FDet.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEB52903C00F00521ADA /* FDet.mm */; };
+		1AFAAECA2903C00F00521ADA /* IO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEB92903C00F00521ADA /* IO.cpp */; };
+		1AFAAECB2903C00F00521ADA /* Detector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEBA2903C00F00521ADA /* Detector.mm */; };
+		1AFAAECC2903C00F00521ADA /* FaceDetect.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEBB2903C00F00521ADA /* FaceDetect.mm */; };
+		1AFAAECD2903C00F00521ADA /* FaceAR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEBC2903C00F00521ADA /* FaceAR.cpp */; };
+		1AFAAECE2903C00F00521ADA /* RegistrationCheck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEBD2903C00F00521ADA /* RegistrationCheck.cpp */; };
+		1AFAAECF2903C00F00521ADA /* Warp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEBE2903C00F00521ADA /* Warp.cpp */; };
+		1AFAAED22903C04A00521ADA /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAED02903C04A00521ADA /* OpenCVWrapper.mm */; };
+		1AFAAED52903C12F00521ADA /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAED42903C12F00521ADA /* Category.m */; };
+		1AFAAEDA2903D40600521ADA /* YUGPUImageCVPixelBufferInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAED82903D40600521ADA /* YUGPUImageCVPixelBufferInput.m */; };
+		1AFAAEDC2903D60300521ADA /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEDB2903D60300521ADA /* FilterManager.swift */; };
+		1AFAAEDE2903D69A00521ADA /* LiveRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEDD2903D69A00521ADA /* LiveRecorder.swift */; };
+		1AFAAEE22903D98F00521ADA /* LFGPUImageBeautyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEE02903D98F00521ADA /* LFGPUImageBeautyFilter.m */; };
 		89B9661469438003EED4EC01 /* Pods_GPUFIlterRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87661CF96BA64330160A97F5 /* Pods_GPUFIlterRecord.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A0EDA022904438C00E3BC59 /* NativeCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeCaptureViewController.swift; sourceTree = "<group>"; };
+		1A2F1DF129040EA800503805 /* LiveVideoCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveVideoCamera.swift; sourceTree = "<group>"; };
+		1A2F1DF329041B0F00503805 /* VideoCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCamera.h; sourceTree = "<group>"; };
+		1A2F1DF429041B1000503805 /* VideoCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCamera.m; sourceTree = "<group>"; };
 		1AFAAE782902EBE000521ADA /* GPUFIlterRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPUFIlterRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AFAAE7B2902EBE000521ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AFAAE7D2902EBE000521ADA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +56,53 @@
 		1AFAAE842902EBE300521ADA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AFAAE872902EBE300521ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AFAAE892902EBE300521ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AFAAE912902F61600521ADA /* GPUFIlterRecord-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GPUFIlterRecord-Bridging-Header.h"; sourceTree = "<group>"; };
+		1AFAAE952902F6DB00521ADA /* model */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = model; path = GPUFIlterRecord/model; sourceTree = SOURCE_ROOT; };
+		1AFAAE972902F71100521ADA /* stickers */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = stickers; path = GPUFIlterRecord/stickers; sourceTree = SOURCE_ROOT; };
+		1AFAAE9D2903BD3B00521ADA /* GPUImageWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageWrapper.h; sourceTree = "<group>"; };
+		1AFAAE9E2903BD3B00521ADA /* GPUImageWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageWrapper.m; sourceTree = "<group>"; };
+		1AFAAEA02903BF9300521ADA /* GPUImageFaceWidgetComposeFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageFaceWidgetComposeFilter.m; sourceTree = "<group>"; };
+		1AFAAEA12903BF9300521ADA /* GPUImageFaceWidgetComposeFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageFaceWidgetComposeFilter.h; sourceTree = "<group>"; };
+		1AFAAEA42903C00F00521ADA /* RegistrationCheck.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RegistrationCheck.hpp; sourceTree = "<group>"; };
+		1AFAAEA52903C00F00521ADA /* Warp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Warp.hpp; sourceTree = "<group>"; };
+		1AFAAEA62903C00F00521ADA /* ShapePredictor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ShapePredictor.hpp; sourceTree = "<group>"; };
+		1AFAAEA72903C00F00521ADA /* ATM.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ATM.mm; sourceTree = "<group>"; };
+		1AFAAEA82903C00F00521ADA /* ShapeModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShapeModel.cpp; sourceTree = "<group>"; };
+		1AFAAEA92903C00F00521ADA /* myFaceAR.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = myFaceAR.mm; sourceTree = "<group>"; };
+		1AFAAEAA2903C00F00521ADA /* BasicDefines.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BasicDefines.hpp; sourceTree = "<group>"; };
+		1AFAAEAB2903C00F00521ADA /* CLM.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CLM.mm; sourceTree = "<group>"; };
+		1AFAAEAC2903C00F00521ADA /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		1AFAAEAD2903C00F00521ADA /* myFaceAR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myFaceAR.h; sourceTree = "<group>"; };
+		1AFAAEAE2903C00F00521ADA /* ShapePredictor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShapePredictor.mm; sourceTree = "<group>"; };
+		1AFAAEAF2903C00F00521ADA /* FCheck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCheck.cpp; sourceTree = "<group>"; };
+		1AFAAEB02903C00F00521ADA /* Patch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Patch.cpp; sourceTree = "<group>"; };
+		1AFAAEB12903C00F00521ADA /* CLM.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CLM.hpp; sourceTree = "<group>"; };
+		1AFAAEB22903C00F00521ADA /* IO.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IO.hpp; sourceTree = "<group>"; };
+		1AFAAEB32903C00F00521ADA /* FDet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FDet.hpp; sourceTree = "<group>"; };
+		1AFAAEB42903C00F00521ADA /* ATM.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ATM.hpp; sourceTree = "<group>"; };
+		1AFAAEB52903C00F00521ADA /* FDet.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FDet.mm; sourceTree = "<group>"; };
+		1AFAAEB62903C00F00521ADA /* FaceAR.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FaceAR.hpp; sourceTree = "<group>"; };
+		1AFAAEB72903C00F00521ADA /* FaceDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetect.h; sourceTree = "<group>"; };
+		1AFAAEB82903C00F00521ADA /* Patch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Patch.hpp; sourceTree = "<group>"; };
+		1AFAAEB92903C00F00521ADA /* IO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IO.cpp; sourceTree = "<group>"; };
+		1AFAAEBA2903C00F00521ADA /* Detector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Detector.mm; sourceTree = "<group>"; };
+		1AFAAEBB2903C00F00521ADA /* FaceDetect.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceDetect.mm; sourceTree = "<group>"; };
+		1AFAAEBC2903C00F00521ADA /* FaceAR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceAR.cpp; sourceTree = "<group>"; };
+		1AFAAEBD2903C00F00521ADA /* RegistrationCheck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegistrationCheck.cpp; sourceTree = "<group>"; };
+		1AFAAEBE2903C00F00521ADA /* Warp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Warp.cpp; sourceTree = "<group>"; };
+		1AFAAEBF2903C00F00521ADA /* ShapeModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ShapeModel.hpp; sourceTree = "<group>"; };
+		1AFAAEC02903C00F00521ADA /* FCheck.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FCheck.hpp; sourceTree = "<group>"; };
+		1AFAAEC12903C00F00521ADA /* Detector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Detector.hpp; sourceTree = "<group>"; };
+		1AFAAED02903C04A00521ADA /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		1AFAAED12903C04A00521ADA /* OpenCVWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		1AFAAED32903C12F00521ADA /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		1AFAAED42903C12F00521ADA /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		1AFAAED82903D40600521ADA /* YUGPUImageCVPixelBufferInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUGPUImageCVPixelBufferInput.m; sourceTree = "<group>"; };
+		1AFAAED92903D40600521ADA /* YUGPUImageCVPixelBufferInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUGPUImageCVPixelBufferInput.h; sourceTree = "<group>"; };
+		1AFAAEDB2903D60300521ADA /* FilterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
+		1AFAAEDD2903D69A00521ADA /* LiveRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveRecorder.swift; sourceTree = "<group>"; };
+		1AFAAEE02903D98F00521ADA /* LFGPUImageBeautyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFGPUImageBeautyFilter.m; sourceTree = "<group>"; };
+		1AFAAEE12903D98F00521ADA /* LFGPUImageBeautyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFGPUImageBeautyFilter.h; sourceTree = "<group>"; };
 		87661CF96BA64330160A97F5 /* Pods_GPUFIlterRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPUFIlterRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C20DFBF4D51D2A97E5A4B7 /* Pods-GPUFIlterRecord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUFIlterRecord.debug.xcconfig"; path = "Target Support Files/Pods-GPUFIlterRecord/Pods-GPUFIlterRecord.debug.xcconfig"; sourceTree = "<group>"; };
 		F1D9A6A6CEA3D36BF33C0A68 /* Pods-GPUFIlterRecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUFIlterRecord.release.xcconfig"; path = "Target Support Files/Pods-GPUFIlterRecord/Pods-GPUFIlterRecord.release.xcconfig"; sourceTree = "<group>"; };
@@ -48,7 +126,6 @@
 				E4C20DFBF4D51D2A97E5A4B7 /* Pods-GPUFIlterRecord.debug.xcconfig */,
 				F1D9A6A6CEA3D36BF33C0A68 /* Pods-GPUFIlterRecord.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -74,14 +151,113 @@
 			isa = PBXGroup;
 			children = (
 				1AFAAE7B2902EBE000521ADA /* AppDelegate.swift */,
+				1AFAAE842902EBE300521ADA /* Assets.xcassets */,
+				1AFAAE902902F60000521ADA /* FaceFilter */,
+				1AFAAE992902F7A300521ADA /* FaceRegconize */,
+				1AFAAE912902F61600521ADA /* GPUFIlterRecord-Bridging-Header.h */,
+				1AFAAE9D2903BD3B00521ADA /* GPUImageWrapper.h */,
+				1AFAAE9E2903BD3B00521ADA /* GPUImageWrapper.m */,
+				1AFAAE892902EBE300521ADA /* Info.plist */,
+				1AFAAE862902EBE300521ADA /* LaunchScreen.storyboard */,
+				1AFAAE812902EBE000521ADA /* Main.storyboard */,
 				1AFAAE7D2902EBE000521ADA /* SceneDelegate.swift */,
 				1AFAAE7F2902EBE000521ADA /* ViewController.swift */,
-				1AFAAE812902EBE000521ADA /* Main.storyboard */,
-				1AFAAE842902EBE300521ADA /* Assets.xcassets */,
-				1AFAAE862902EBE300521ADA /* LaunchScreen.storyboard */,
-				1AFAAE892902EBE300521ADA /* Info.plist */,
+				1AFAAEDD2903D69A00521ADA /* LiveRecorder.swift */,
+				1A2F1DF129040EA800503805 /* LiveVideoCamera.swift */,
+				1A2F1DF329041B0F00503805 /* VideoCamera.h */,
+				1A2F1DF429041B1000503805 /* VideoCamera.m */,
+				1A0EDA022904438C00E3BC59 /* NativeCaptureViewController.swift */,
 			);
 			path = GPUFIlterRecord;
+			sourceTree = "<group>";
+		};
+		1AFAAE8F2902F5F900521ADA /* FaceModel */ = {
+			isa = PBXGroup;
+			children = (
+				1AFAAE952902F6DB00521ADA /* model */,
+			);
+			path = FaceModel;
+			sourceTree = "<group>";
+		};
+		1AFAAE902902F60000521ADA /* FaceFilter */ = {
+			isa = PBXGroup;
+			children = (
+				1AFAAEE32903D99800521ADA /* FaceWidget */,
+				1AFAAEDF2903D98500521ADA /* BeautyFilter */,
+				1AFAAED92903D40600521ADA /* YUGPUImageCVPixelBufferInput.h */,
+				1AFAAED82903D40600521ADA /* YUGPUImageCVPixelBufferInput.m */,
+				1AFAAEDB2903D60300521ADA /* FilterManager.swift */,
+				1AFAAE972902F71100521ADA /* stickers */,
+			);
+			path = FaceFilter;
+			sourceTree = "<group>";
+		};
+		1AFAAE992902F7A300521ADA /* FaceRegconize */ = {
+			isa = PBXGroup;
+			children = (
+				1AFAAE8F2902F5F900521ADA /* FaceModel */,
+				1AFAAED32903C12F00521ADA /* Category.h */,
+				1AFAAED42903C12F00521ADA /* Category.m */,
+				1AFAAED12903C04A00521ADA /* OpenCVWrapper.h */,
+				1AFAAED02903C04A00521ADA /* OpenCVWrapper.mm */,
+				1AFAAEA32903C00F00521ADA /* LandmarkDetector */,
+			);
+			path = FaceRegconize;
+			sourceTree = "<group>";
+		};
+		1AFAAEA32903C00F00521ADA /* LandmarkDetector */ = {
+			isa = PBXGroup;
+			children = (
+				1AFAAEA42903C00F00521ADA /* RegistrationCheck.hpp */,
+				1AFAAEA52903C00F00521ADA /* Warp.hpp */,
+				1AFAAEA62903C00F00521ADA /* ShapePredictor.hpp */,
+				1AFAAEA72903C00F00521ADA /* ATM.mm */,
+				1AFAAEA82903C00F00521ADA /* ShapeModel.cpp */,
+				1AFAAEA92903C00F00521ADA /* myFaceAR.mm */,
+				1AFAAEAA2903C00F00521ADA /* BasicDefines.hpp */,
+				1AFAAEAB2903C00F00521ADA /* CLM.mm */,
+				1AFAAEAC2903C00F00521ADA /* Config.h */,
+				1AFAAEAD2903C00F00521ADA /* myFaceAR.h */,
+				1AFAAEAE2903C00F00521ADA /* ShapePredictor.mm */,
+				1AFAAEAF2903C00F00521ADA /* FCheck.cpp */,
+				1AFAAEB02903C00F00521ADA /* Patch.cpp */,
+				1AFAAEB12903C00F00521ADA /* CLM.hpp */,
+				1AFAAEB22903C00F00521ADA /* IO.hpp */,
+				1AFAAEB32903C00F00521ADA /* FDet.hpp */,
+				1AFAAEB42903C00F00521ADA /* ATM.hpp */,
+				1AFAAEB52903C00F00521ADA /* FDet.mm */,
+				1AFAAEB62903C00F00521ADA /* FaceAR.hpp */,
+				1AFAAEB72903C00F00521ADA /* FaceDetect.h */,
+				1AFAAEB82903C00F00521ADA /* Patch.hpp */,
+				1AFAAEB92903C00F00521ADA /* IO.cpp */,
+				1AFAAEBA2903C00F00521ADA /* Detector.mm */,
+				1AFAAEBB2903C00F00521ADA /* FaceDetect.mm */,
+				1AFAAEBC2903C00F00521ADA /* FaceAR.cpp */,
+				1AFAAEBD2903C00F00521ADA /* RegistrationCheck.cpp */,
+				1AFAAEBE2903C00F00521ADA /* Warp.cpp */,
+				1AFAAEBF2903C00F00521ADA /* ShapeModel.hpp */,
+				1AFAAEC02903C00F00521ADA /* FCheck.hpp */,
+				1AFAAEC12903C00F00521ADA /* Detector.hpp */,
+			);
+			path = LandmarkDetector;
+			sourceTree = "<group>";
+		};
+		1AFAAEDF2903D98500521ADA /* BeautyFilter */ = {
+			isa = PBXGroup;
+			children = (
+				1AFAAEE12903D98F00521ADA /* LFGPUImageBeautyFilter.h */,
+				1AFAAEE02903D98F00521ADA /* LFGPUImageBeautyFilter.m */,
+			);
+			path = BeautyFilter;
+			sourceTree = "<group>";
+		};
+		1AFAAEE32903D99800521ADA /* FaceWidget */ = {
+			isa = PBXGroup;
+			children = (
+				1AFAAEA12903BF9300521ADA /* GPUImageFaceWidgetComposeFilter.h */,
+				1AFAAEA02903BF9300521ADA /* GPUImageFaceWidgetComposeFilter.m */,
+			);
+			path = FaceWidget;
 			sourceTree = "<group>";
 		};
 		C409D169AB2B2CC06ABB6AC1 /* Frameworks */ = {
@@ -126,6 +302,7 @@
 				TargetAttributes = {
 					1AFAAE772902EBE000521ADA = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -154,7 +331,9 @@
 			files = (
 				1AFAAE882902EBE300521ADA /* LaunchScreen.storyboard in Resources */,
 				1AFAAE852902EBE300521ADA /* Assets.xcassets in Resources */,
+				1AFAAE962902F6DB00521ADA /* model in Resources */,
 				1AFAAE832902EBE000521ADA /* Main.storyboard in Resources */,
+				1AFAAE982902F71200521ADA /* stickers in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,9 +386,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AFAAED22903C04A00521ADA /* OpenCVWrapper.mm in Sources */,
+				1AFAAEE22903D98F00521ADA /* LFGPUImageBeautyFilter.m in Sources */,
+				1AFAAEC92903C00F00521ADA /* FDet.mm in Sources */,
+				1AFAAECE2903C00F00521ADA /* RegistrationCheck.cpp in Sources */,
+				1AFAAEC22903C00F00521ADA /* ATM.mm in Sources */,
+				1AFAAEC52903C00F00521ADA /* CLM.mm in Sources */,
+				1A2F1DF229040EA800503805 /* LiveVideoCamera.swift in Sources */,
 				1AFAAE802902EBE000521ADA /* ViewController.swift in Sources */,
+				1AFAAEDC2903D60300521ADA /* FilterManager.swift in Sources */,
+				1A2F1DF529041B1000503805 /* VideoCamera.m in Sources */,
 				1AFAAE7C2902EBE000521ADA /* AppDelegate.swift in Sources */,
+				1AFAAED52903C12F00521ADA /* Category.m in Sources */,
+				1AFAAEC42903C00F00521ADA /* myFaceAR.mm in Sources */,
+				1AFAAEA22903BF9300521ADA /* GPUImageFaceWidgetComposeFilter.m in Sources */,
+				1A0EDA032904438C00E3BC59 /* NativeCaptureViewController.swift in Sources */,
+				1AFAAEDE2903D69A00521ADA /* LiveRecorder.swift in Sources */,
+				1AFAAECA2903C00F00521ADA /* IO.cpp in Sources */,
+				1AFAAECD2903C00F00521ADA /* FaceAR.cpp in Sources */,
+				1AFAAECB2903C00F00521ADA /* Detector.mm in Sources */,
+				1AFAAECF2903C00F00521ADA /* Warp.cpp in Sources */,
+				1AFAAEC82903C00F00521ADA /* Patch.cpp in Sources */,
+				1AFAAE9F2903BD3B00521ADA /* GPUImageWrapper.m in Sources */,
 				1AFAAE7E2902EBE000521ADA /* SceneDelegate.swift in Sources */,
+				1AFAAEC72903C00F00521ADA /* FCheck.cpp in Sources */,
+				1AFAAECC2903C00F00521ADA /* FaceDetect.mm in Sources */,
+				1AFAAEDA2903D40600521ADA /* YUGPUImageCVPixelBufferInput.m in Sources */,
+				1AFAAEC62903C00F00521ADA /* ShapePredictor.mm in Sources */,
+				1AFAAEC32903C00F00521ADA /* ShapeModel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,9 +559,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4HNHR4AUAH;
+				ENABLE_BITCODE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GPUFIlterRecord/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -374,6 +580,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.khangle99.GPUFIlterRecord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "GPUFIlterRecord/GPUFIlterRecord-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -385,9 +593,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4HNHR4AUAH;
+				ENABLE_BITCODE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GPUFIlterRecord/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -404,6 +614,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.khangle99.GPUFIlterRecord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "GPUFIlterRecord/GPUFIlterRecord-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
