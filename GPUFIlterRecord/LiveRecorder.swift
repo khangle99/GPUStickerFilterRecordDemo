@@ -43,13 +43,13 @@ class LiveRecorder: NSObject {
         videoInput?.removeTarget(movieWriter)
         movieWriter?.finishRecording {
                 print("Finish record")
+            self.delegate?.recordCompeleted()
         }
     }
 }
 extension LiveRecorder: GPUImageMovieWriterDelegate {
     func movieRecordingCompleted() {
         print("Compelete record")
-        delegate?.recordCompeleted()
     }
     
     func movieRecordingFailedWithError(_ error: Error!) {
