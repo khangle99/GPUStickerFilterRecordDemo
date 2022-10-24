@@ -16,7 +16,6 @@
 		1AFAAE832902EBE000521ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAAE812902EBE000521ADA /* Main.storyboard */; };
 		1AFAAE852902EBE300521ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAAE842902EBE300521ADA /* Assets.xcassets */; };
 		1AFAAE882902EBE300521ADA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAAE862902EBE300521ADA /* LaunchScreen.storyboard */; };
-		1AFAAE962902F6DB00521ADA /* model in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAAE952902F6DB00521ADA /* model */; };
 		1AFAAE982902F71200521ADA /* stickers in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAAE972902F71100521ADA /* stickers */; };
 		1AFAAE9F2903BD3B00521ADA /* GPUImageWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAE9E2903BD3B00521ADA /* GPUImageWrapper.m */; };
 		1AFAAEA22903BF9300521ADA /* GPUImageFaceWidgetComposeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEA02903BF9300521ADA /* GPUImageFaceWidgetComposeFilter.m */; };
@@ -40,6 +39,7 @@
 		1AFAAEDC2903D60300521ADA /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEDB2903D60300521ADA /* FilterManager.swift */; };
 		1AFAAEDE2903D69A00521ADA /* LiveRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEDD2903D69A00521ADA /* LiveRecorder.swift */; };
 		1AFAAEE22903D98F00521ADA /* LFGPUImageBeautyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEE02903D98F00521ADA /* LFGPUImageBeautyFilter.m */; };
+		73D8A31629064665000ED581 /* model in Resources */ = {isa = PBXBuildFile; fileRef = 73D8A31529064665000ED581 /* model */; };
 		89B9661469438003EED4EC01 /* Pods_GPUFIlterRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87661CF96BA64330160A97F5 /* Pods_GPUFIlterRecord.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +57,6 @@
 		1AFAAE872902EBE300521ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AFAAE892902EBE300521ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AFAAE912902F61600521ADA /* GPUFIlterRecord-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GPUFIlterRecord-Bridging-Header.h"; sourceTree = "<group>"; };
-		1AFAAE952902F6DB00521ADA /* model */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = model; path = GPUFIlterRecord/model; sourceTree = SOURCE_ROOT; };
 		1AFAAE972902F71100521ADA /* stickers */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = stickers; path = GPUFIlterRecord/stickers; sourceTree = SOURCE_ROOT; };
 		1AFAAE9D2903BD3B00521ADA /* GPUImageWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageWrapper.h; sourceTree = "<group>"; };
 		1AFAAE9E2903BD3B00521ADA /* GPUImageWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageWrapper.m; sourceTree = "<group>"; };
@@ -103,6 +102,7 @@
 		1AFAAEDD2903D69A00521ADA /* LiveRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveRecorder.swift; sourceTree = "<group>"; };
 		1AFAAEE02903D98F00521ADA /* LFGPUImageBeautyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFGPUImageBeautyFilter.m; sourceTree = "<group>"; };
 		1AFAAEE12903D98F00521ADA /* LFGPUImageBeautyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFGPUImageBeautyFilter.h; sourceTree = "<group>"; };
+		73D8A31529064665000ED581 /* model */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = model; path = GPUFIlterRecord/model; sourceTree = SOURCE_ROOT; };
 		87661CF96BA64330160A97F5 /* Pods_GPUFIlterRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPUFIlterRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C20DFBF4D51D2A97E5A4B7 /* Pods-GPUFIlterRecord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUFIlterRecord.debug.xcconfig"; path = "Target Support Files/Pods-GPUFIlterRecord/Pods-GPUFIlterRecord.debug.xcconfig"; sourceTree = "<group>"; };
 		F1D9A6A6CEA3D36BF33C0A68 /* Pods-GPUFIlterRecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUFIlterRecord.release.xcconfig"; path = "Target Support Files/Pods-GPUFIlterRecord/Pods-GPUFIlterRecord.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,14 +171,6 @@
 			path = GPUFIlterRecord;
 			sourceTree = "<group>";
 		};
-		1AFAAE8F2902F5F900521ADA /* FaceModel */ = {
-			isa = PBXGroup;
-			children = (
-				1AFAAE952902F6DB00521ADA /* model */,
-			);
-			path = FaceModel;
-			sourceTree = "<group>";
-		};
 		1AFAAE902902F60000521ADA /* FaceFilter */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +187,7 @@
 		1AFAAE992902F7A300521ADA /* FaceRegconize */ = {
 			isa = PBXGroup;
 			children = (
-				1AFAAE8F2902F5F900521ADA /* FaceModel */,
+				73D8A3142906463A000ED581 /* FaceModel */,
 				1AFAAED32903C12F00521ADA /* Category.h */,
 				1AFAAED42903C12F00521ADA /* Category.m */,
 				1AFAAED12903C04A00521ADA /* OpenCVWrapper.h */,
@@ -258,6 +250,14 @@
 				1AFAAEA02903BF9300521ADA /* GPUImageFaceWidgetComposeFilter.m */,
 			);
 			path = FaceWidget;
+			sourceTree = "<group>";
+		};
+		73D8A3142906463A000ED581 /* FaceModel */ = {
+			isa = PBXGroup;
+			children = (
+				73D8A31529064665000ED581 /* model */,
+			);
+			path = FaceModel;
 			sourceTree = "<group>";
 		};
 		C409D169AB2B2CC06ABB6AC1 /* Frameworks */ = {
@@ -330,8 +330,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AFAAE882902EBE300521ADA /* LaunchScreen.storyboard in Resources */,
+				73D8A31629064665000ED581 /* model in Resources */,
 				1AFAAE852902EBE300521ADA /* Assets.xcassets in Resources */,
-				1AFAAE962902F6DB00521ADA /* model in Resources */,
 				1AFAAE832902EBE000521ADA /* Main.storyboard in Resources */,
 				1AFAAE982902F71200521ADA /* stickers in Resources */,
 			);
