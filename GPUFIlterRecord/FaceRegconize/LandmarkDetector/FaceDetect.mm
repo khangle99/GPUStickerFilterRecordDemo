@@ -22,10 +22,10 @@ struct Configuration
 @end
 
 @implementation FaceDetect{
-    FACETRACKER::FaceAR *tracker;
-    FACETRACKER::FaceAR *tracker2;
-    FACETRACKER::myFaceARParams *tracker_params;
-    FACETRACKER::myFaceARParams *tracker_params2;
+    FACETRACKER::FaceTracker *tracker;
+    FACETRACKER::FaceTracker *tracker2;
+    FACETRACKER::myFaceTrackerParams *tracker_params;
+    FACETRACKER::myFaceTrackerParams *tracker_params2;
     Configuration cfg;
     FACETRACKER::FDet fdet;
     int frame_number;
@@ -46,10 +46,10 @@ struct Configuration
     cfg.circle_linetype = 8;
     cfg.circle_shift = 0;
     
-    tracker = FACETRACKER::LoadFaceAR(cfg.model_pathname.c_str());
-    tracker2 = FACETRACKER::LoadFaceAR(cfg.model_pathname.c_str());
+    tracker = FACETRACKER::LoadFaceTracker(cfg.model_pathname.c_str());
+    tracker2 = FACETRACKER::LoadFaceTracker(cfg.model_pathname.c_str());
 //    tracker2 = tracker;
-    tracker_params =(FACETRACKER::myFaceARParams *)FACETRACKER::LoadFaceARParams(cfg.params_pathname.c_str());
+    tracker_params =(FACETRACKER::myFaceTrackerParams *)FACETRACKER::LoadFaceTrackerParams(cfg.params_pathname.c_str());
     tracker_params->init_type = 0;
     tracker_params->track_type = 1;
     tracker_params->itol = 10;
@@ -65,7 +65,7 @@ struct Configuration
     tracker_params->atm_thresh = 100;
     tracker_params->atm_ntemp = 2;
    
-    tracker_params2 = new FACETRACKER::myFaceARParams(*tracker_params);
+    tracker_params2 = new FACETRACKER::myFaceTrackerParams(*tracker_params);
     tracker_params2->track_type = 0;
     
  
@@ -91,8 +91,8 @@ struct Configuration
     __block int result1 = 0;
     __block int result2 = 0;
     cv::Rect R1 ,R2 ,trackerRect1,trackerRect2;
-    R1 = ((FACETRACKER::myFaceAR *)tracker)->R;
-    R2 = ((FACETRACKER::myFaceAR *)tracker2)->R;
+    R1 = ((FACETRACKER::myFaceTracker *)tracker)->R;
+    R2 = ((FACETRACKER::myFaceTracker *)tracker2)->R;
 
     if((R1.width <= 0 && R2.width <= 0) || (frame_number % 20 == 0 && (R1.width <= 0 || R2.width <= 0))){
         int scanFaceSize = 70;
@@ -122,10 +122,10 @@ struct Configuration
 
     dispatch_apply(2, globalQueue, ^(size_t i) {
         if(i == 0 && R1.width > 0){
-            result1 = ((FACETRACKER::myFaceAR *)tracker)->trackerWithRect(gray_image,tracker_params,trackerRect1);
+            result1 = ((FACETRACKER::myFaceTracker *)tracker)->trackerWithRect(gray_image,tracker_params,trackerRect1);
         }
         if(i == 1 && R2.width > 0){
-            result2 = ((FACETRACKER::myFaceAR *)tracker2)->trackerWithRect(gray_image,tracker_params2,trackerRect2);
+            result2 = ((FACETRACKER::myFaceTracker *)tracker2)->trackerWithRect(gray_image,tracker_params2,trackerRect2);
         }
     });
  

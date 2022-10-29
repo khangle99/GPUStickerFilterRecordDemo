@@ -18,92 +18,102 @@
 // Copyright CSIRO 2013
 
 #include "IO.hpp"
-#include "myFaceAR.h"
+#include "myFaceTracker.h"
 #include "Config.h"
+#include "ShapeModel.hpp"
 
 using namespace FACETRACKER;
 using namespace std;
 //===========================================================================
-FaceARParams::~FaceARParams()
+FaceTrackerParams::~FaceTrackerParams()
 {
 
 }
 //===========================================================================
-FaceAR::~FaceAR()
+FaceTracker::~FaceTracker()
 {
 
 }
 //===========================================================================
-FaceAR* FACETRACKER::LoadFaceAR(const char* fname)
+FaceTracker* FACETRACKER::LoadFaceTracker(const char* fname)
 {
-  int type; FaceAR* model=NULL;
+  int type; FaceTracker* model=NULL;
   ifstream file(fname); assert(file.is_open()); file >> type; file.close();
   switch(type){
-  case IO::MYFACEAR: 
-    model = new myFaceAR(fname); break;
-  default:    
+  case IO::MYFACETRACKER:
+    model = new myFaceTracker(fname); break;
+  default:
     file.open(fname,std::ios::binary); assert(file.is_open());
     file.read(reinterpret_cast<char*>(&type), sizeof(type));
     file.close();
-    if(type == IOBinary::MYFACEAR){
-      model = new myFaceAR(fname, true);
+    if(type == IOBinary::MYFACETRACKER){
+      model = new myFaceTracker(fname, true);
     }
     else
-      printf("ERROR(%s,%d) : unknown facetracker type %d\n", 
-	     __FILE__,__LINE__,type);
+      printf("ERROR(%s,%d) : unknown facetracker type %d\n",
+         __FILE__,__LINE__,type);
   }return model;
 }
-
 //============================================================================
-FaceARParams * FACETRACKER::LoadFaceARParams(const char* fname)
+FaceTrackerParams * FACETRACKER::LoadFaceTrackerParams(const char* fname)
 {
-  int type; FaceARParams * model = NULL;
+  int type; FaceTrackerParams * model = NULL;
   ifstream file(fname); assert(file.is_open()); file >> type; file.close();
   switch(type){
-  case IO::MYFACEARPARAMS: 
-    model =  new myFaceARParams(fname); 
+  case IO::MYFACETRACKERPARAMS:
+    model =  new myFaceTrackerParams(fname);
     break;
   default:
     file.open(fname,std::ios::binary); assert(file.is_open());
     file.read(reinterpret_cast<char*>(&type), sizeof(type));
     file.close();
-    if(type == IOBinary::MYFACEARPARAMS)
-      model = new myFaceARParams(fname, true);
+    if(type == IOBinary::MYFACETRACKERPARAMS)
+      model = new myFaceTrackerParams(fname, true);
     else
-      printf("ERROR(%s,%d) : unknown facetracker parameter type %d\n", 
-	     __FILE__,__LINE__,type);
+      printf("ERROR(%s,%d) : unknown facetracker parameter type %d\n",
+         __FILE__,__LINE__,type);
   }return model;
 }
 //============================================================================
 
 std::string
-FACETRACKER::DefaultFaceARModelPathname()
+FACETRACKER::DefaultFaceTrackerModelPathname()
 {
   char *v = getenv("CSIRO_FACE_TRACKER_MODEL_PATHNAME");
   if (v)
     return v;
   else
-    return FACEAR_DEFAULT_MODEL_PATHNAME;
+    return FACETRACKER_DEFAULT_MODEL_PATHNAME;
 }
 
 std::string
-FACETRACKER::DefaultFaceARParamsPathname()
+FACETRACKER::DefaultFaceTrackerParamsPathname()
 {
   char *v = getenv("CSIRO_FACE_TRACKER_PARAMS_PATHNAME");
   if (v)
     return v;
   else
-    return FACEAR_DEFAULT_PARAMS_PATHNAME;
+    return FACETRACKER_DEFAULT_PARAMS_PATHNAME;
 }
 
-FaceAR *
-FACETRACKER::LoadFaceAR()
+FaceTracker *
+FACETRACKER::LoadFaceTracker()
 {
-  return LoadFaceAR(DefaultFaceARModelPathname().c_str());
+  return LoadFaceTracker(DefaultFaceTrackerModelPathname().c_str());
 }
 
-FaceARParams *
-FACETRACKER::LoadFaceARParams()
+FaceTrackerParams *
+FACETRACKER::LoadFaceTrackerParams()
 {
-  return LoadFaceARParams(DefaultFaceARParamsPathname().c_str());
+  return LoadFaceTrackerParams(DefaultFaceTrackerParamsPathname().c_str());
+}
+
+// Compute the vectors for each axis i.e. x-axis, y-axis then
+// z-axis. Alternatively the pitch, yaw, roll
+cv::Mat_<double>
+FACETRACKER::pose_axes(const Pose &pose)
+{
+  cv::Mat_<double> rv(3,3);
+  Euler2Rot(rv, pose.pitch, pose.yaw, pose.roll);
+  return rv;
 }

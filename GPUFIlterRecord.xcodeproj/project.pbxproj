@@ -21,7 +21,7 @@
 		1AFAAEA22903BF9300521ADA /* GPUImageFaceWidgetComposeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEA02903BF9300521ADA /* GPUImageFaceWidgetComposeFilter.m */; };
 		1AFAAEC22903C00F00521ADA /* ATM.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEA72903C00F00521ADA /* ATM.mm */; };
 		1AFAAEC32903C00F00521ADA /* ShapeModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEA82903C00F00521ADA /* ShapeModel.cpp */; };
-		1AFAAEC42903C00F00521ADA /* myFaceAR.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEA92903C00F00521ADA /* myFaceAR.mm */; };
+		1AFAAEC42903C00F00521ADA /* myFaceTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEA92903C00F00521ADA /* myFaceTracker.mm */; };
 		1AFAAEC52903C00F00521ADA /* CLM.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEAB2903C00F00521ADA /* CLM.mm */; };
 		1AFAAEC62903C00F00521ADA /* ShapePredictor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEAE2903C00F00521ADA /* ShapePredictor.mm */; };
 		1AFAAEC72903C00F00521ADA /* FCheck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEAF2903C00F00521ADA /* FCheck.cpp */; };
@@ -30,7 +30,7 @@
 		1AFAAECA2903C00F00521ADA /* IO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEB92903C00F00521ADA /* IO.cpp */; };
 		1AFAAECB2903C00F00521ADA /* Detector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEBA2903C00F00521ADA /* Detector.mm */; };
 		1AFAAECC2903C00F00521ADA /* FaceDetect.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEBB2903C00F00521ADA /* FaceDetect.mm */; };
-		1AFAAECD2903C00F00521ADA /* FaceAR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEBC2903C00F00521ADA /* FaceAR.cpp */; };
+		1AFAAECD2903C00F00521ADA /* FaceTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEBC2903C00F00521ADA /* FaceTracker.cpp */; };
 		1AFAAECE2903C00F00521ADA /* RegistrationCheck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEBD2903C00F00521ADA /* RegistrationCheck.cpp */; };
 		1AFAAECF2903C00F00521ADA /* Warp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAEBE2903C00F00521ADA /* Warp.cpp */; };
 		1AFAAED22903C04A00521ADA /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAAED02903C04A00521ADA /* OpenCVWrapper.mm */; };
@@ -67,11 +67,11 @@
 		1AFAAEA62903C00F00521ADA /* ShapePredictor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ShapePredictor.hpp; sourceTree = "<group>"; };
 		1AFAAEA72903C00F00521ADA /* ATM.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ATM.mm; sourceTree = "<group>"; };
 		1AFAAEA82903C00F00521ADA /* ShapeModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShapeModel.cpp; sourceTree = "<group>"; };
-		1AFAAEA92903C00F00521ADA /* myFaceAR.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = myFaceAR.mm; sourceTree = "<group>"; };
+		1AFAAEA92903C00F00521ADA /* myFaceTracker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = myFaceTracker.mm; sourceTree = "<group>"; };
 		1AFAAEAA2903C00F00521ADA /* BasicDefines.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BasicDefines.hpp; sourceTree = "<group>"; };
 		1AFAAEAB2903C00F00521ADA /* CLM.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CLM.mm; sourceTree = "<group>"; };
 		1AFAAEAC2903C00F00521ADA /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
-		1AFAAEAD2903C00F00521ADA /* myFaceAR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myFaceAR.h; sourceTree = "<group>"; };
+		1AFAAEAD2903C00F00521ADA /* myFaceTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myFaceTracker.h; sourceTree = "<group>"; };
 		1AFAAEAE2903C00F00521ADA /* ShapePredictor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShapePredictor.mm; sourceTree = "<group>"; };
 		1AFAAEAF2903C00F00521ADA /* FCheck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCheck.cpp; sourceTree = "<group>"; };
 		1AFAAEB02903C00F00521ADA /* Patch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Patch.cpp; sourceTree = "<group>"; };
@@ -80,13 +80,13 @@
 		1AFAAEB32903C00F00521ADA /* FDet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FDet.hpp; sourceTree = "<group>"; };
 		1AFAAEB42903C00F00521ADA /* ATM.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ATM.hpp; sourceTree = "<group>"; };
 		1AFAAEB52903C00F00521ADA /* FDet.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FDet.mm; sourceTree = "<group>"; };
-		1AFAAEB62903C00F00521ADA /* FaceAR.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FaceAR.hpp; sourceTree = "<group>"; };
+		1AFAAEB62903C00F00521ADA /* FaceTracker.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FaceTracker.hpp; sourceTree = "<group>"; };
 		1AFAAEB72903C00F00521ADA /* FaceDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetect.h; sourceTree = "<group>"; };
 		1AFAAEB82903C00F00521ADA /* Patch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Patch.hpp; sourceTree = "<group>"; };
 		1AFAAEB92903C00F00521ADA /* IO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IO.cpp; sourceTree = "<group>"; };
 		1AFAAEBA2903C00F00521ADA /* Detector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Detector.mm; sourceTree = "<group>"; };
 		1AFAAEBB2903C00F00521ADA /* FaceDetect.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceDetect.mm; sourceTree = "<group>"; };
-		1AFAAEBC2903C00F00521ADA /* FaceAR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceAR.cpp; sourceTree = "<group>"; };
+		1AFAAEBC2903C00F00521ADA /* FaceTracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceTracker.cpp; sourceTree = "<group>"; };
 		1AFAAEBD2903C00F00521ADA /* RegistrationCheck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegistrationCheck.cpp; sourceTree = "<group>"; };
 		1AFAAEBE2903C00F00521ADA /* Warp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Warp.cpp; sourceTree = "<group>"; };
 		1AFAAEBF2903C00F00521ADA /* ShapeModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ShapeModel.hpp; sourceTree = "<group>"; };
@@ -200,36 +200,36 @@
 		1AFAAEA32903C00F00521ADA /* LandmarkDetector */ = {
 			isa = PBXGroup;
 			children = (
-				1AFAAEA42903C00F00521ADA /* RegistrationCheck.hpp */,
-				1AFAAEA52903C00F00521ADA /* Warp.hpp */,
-				1AFAAEA62903C00F00521ADA /* ShapePredictor.hpp */,
+				1AFAAEB42903C00F00521ADA /* ATM.hpp */,
 				1AFAAEA72903C00F00521ADA /* ATM.mm */,
-				1AFAAEA82903C00F00521ADA /* ShapeModel.cpp */,
-				1AFAAEA92903C00F00521ADA /* myFaceAR.mm */,
 				1AFAAEAA2903C00F00521ADA /* BasicDefines.hpp */,
+				1AFAAEB12903C00F00521ADA /* CLM.hpp */,
 				1AFAAEAB2903C00F00521ADA /* CLM.mm */,
 				1AFAAEAC2903C00F00521ADA /* Config.h */,
-				1AFAAEAD2903C00F00521ADA /* myFaceAR.h */,
-				1AFAAEAE2903C00F00521ADA /* ShapePredictor.mm */,
-				1AFAAEAF2903C00F00521ADA /* FCheck.cpp */,
-				1AFAAEB02903C00F00521ADA /* Patch.cpp */,
-				1AFAAEB12903C00F00521ADA /* CLM.hpp */,
-				1AFAAEB22903C00F00521ADA /* IO.hpp */,
-				1AFAAEB32903C00F00521ADA /* FDet.hpp */,
-				1AFAAEB42903C00F00521ADA /* ATM.hpp */,
-				1AFAAEB52903C00F00521ADA /* FDet.mm */,
-				1AFAAEB62903C00F00521ADA /* FaceAR.hpp */,
-				1AFAAEB72903C00F00521ADA /* FaceDetect.h */,
-				1AFAAEB82903C00F00521ADA /* Patch.hpp */,
-				1AFAAEB92903C00F00521ADA /* IO.cpp */,
-				1AFAAEBA2903C00F00521ADA /* Detector.mm */,
-				1AFAAEBB2903C00F00521ADA /* FaceDetect.mm */,
-				1AFAAEBC2903C00F00521ADA /* FaceAR.cpp */,
-				1AFAAEBD2903C00F00521ADA /* RegistrationCheck.cpp */,
-				1AFAAEBE2903C00F00521ADA /* Warp.cpp */,
-				1AFAAEBF2903C00F00521ADA /* ShapeModel.hpp */,
-				1AFAAEC02903C00F00521ADA /* FCheck.hpp */,
 				1AFAAEC12903C00F00521ADA /* Detector.hpp */,
+				1AFAAEBA2903C00F00521ADA /* Detector.mm */,
+				1AFAAEBC2903C00F00521ADA /* FaceTracker.cpp */,
+				1AFAAEB62903C00F00521ADA /* FaceTracker.hpp */,
+				1AFAAEB72903C00F00521ADA /* FaceDetect.h */,
+				1AFAAEBB2903C00F00521ADA /* FaceDetect.mm */,
+				1AFAAEAF2903C00F00521ADA /* FCheck.cpp */,
+				1AFAAEC02903C00F00521ADA /* FCheck.hpp */,
+				1AFAAEB32903C00F00521ADA /* FDet.hpp */,
+				1AFAAEB52903C00F00521ADA /* FDet.mm */,
+				1AFAAEB92903C00F00521ADA /* IO.cpp */,
+				1AFAAEB22903C00F00521ADA /* IO.hpp */,
+				1AFAAEAD2903C00F00521ADA /* myFaceTracker.h */,
+				1AFAAEA92903C00F00521ADA /* myFaceTracker.mm */,
+				1AFAAEB02903C00F00521ADA /* Patch.cpp */,
+				1AFAAEB82903C00F00521ADA /* Patch.hpp */,
+				1AFAAEBD2903C00F00521ADA /* RegistrationCheck.cpp */,
+				1AFAAEA42903C00F00521ADA /* RegistrationCheck.hpp */,
+				1AFAAEA82903C00F00521ADA /* ShapeModel.cpp */,
+				1AFAAEBF2903C00F00521ADA /* ShapeModel.hpp */,
+				1AFAAEA62903C00F00521ADA /* ShapePredictor.hpp */,
+				1AFAAEAE2903C00F00521ADA /* ShapePredictor.mm */,
+				1AFAAEBE2903C00F00521ADA /* Warp.cpp */,
+				1AFAAEA52903C00F00521ADA /* Warp.hpp */,
 			);
 			path = LandmarkDetector;
 			sourceTree = "<group>";
@@ -398,12 +398,12 @@
 				1A2F1DF529041B1000503805 /* VideoCamera.m in Sources */,
 				1AFAAE7C2902EBE000521ADA /* AppDelegate.swift in Sources */,
 				1AFAAED52903C12F00521ADA /* Category.m in Sources */,
-				1AFAAEC42903C00F00521ADA /* myFaceAR.mm in Sources */,
+				1AFAAEC42903C00F00521ADA /* myFaceTracker.mm in Sources */,
 				1AFAAEA22903BF9300521ADA /* GPUImageFaceWidgetComposeFilter.m in Sources */,
 				1A0EDA032904438C00E3BC59 /* NativeCaptureViewController.swift in Sources */,
 				1AFAAEDE2903D69A00521ADA /* LiveRecorder.swift in Sources */,
 				1AFAAECA2903C00F00521ADA /* IO.cpp in Sources */,
-				1AFAAECD2903C00F00521ADA /* FaceAR.cpp in Sources */,
+				1AFAAECD2903C00F00521ADA /* FaceTracker.cpp in Sources */,
 				1AFAAECB2903C00F00521ADA /* Detector.mm in Sources */,
 				1AFAAECF2903C00F00521ADA /* Warp.cpp in Sources */,
 				1AFAAEC82903C00F00521ADA /* Patch.cpp in Sources */,

@@ -5,8 +5,8 @@
 #include <opencv2/videoio/videoio_c.h>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
-#include "FaceAR.hpp"
-#include "myFaceAR.h"
+#include "FaceTracker.hpp"
+#include "myFaceTracker.h"
 
 @interface FaceDetect : NSObject
 

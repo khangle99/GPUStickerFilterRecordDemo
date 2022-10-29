@@ -17,19 +17,19 @@
 
 // Copyright CSIRO 2013
 
-#ifndef _TRACKER_myFaceAR_h_
-#define _TRACKER_myFaceAR_h_
+#ifndef _TRACKER_myFaceTracker_h_
+#define _TRACKER_myFaceTracker_h_
 #include "IO.hpp"
 #include "ATM.hpp"
 #include "CLM.hpp"
 #include "FDet.hpp"
 #include "RegistrationCheck.hpp"
-#include "FaceAR.hpp"
+#include "FaceTracker.hpp"
 #include "ShapePredictor.hpp"
 namespace FACETRACKER
 {
   //============================================================================
-  class myFaceAR : public FaceAR{
+  class myFaceTracker : public FaceTracker{
   public:
     CLM _clm;                      /**< Constrained Local Model             */
     ATM _atm;                      /**< Active template model               */
@@ -45,9 +45,9 @@ namespace FACETRACKER
     bool trackIng;
 //    dispatch_queue_t serialQueue;
       
-    myFaceAR(){_time=-1;}
-    myFaceAR(const char* fname, bool binary = false){this->Load(fname, binary);}
-    myFaceAR(const char* clmFile,     //CLM
+    myFaceTracker(){_time=-1;}
+    myFaceTracker(const char* fname, bool binary = false){this->Load(fname, binary);}
+    myFaceTracker(const char* clmFile,     //CLM
 		  const char* sInitFile,   //SInit
 		  const char* FcheckFile,  //RegistrationCheck
 		  //		  const char* praFile,     //praFacePredictor
@@ -59,8 +59,8 @@ namespace FACETRACKER
     std::vector<cv::Point3_<double> > get3DShape() const;
     Pose getPose() const;
     
-    int trackerWithRect(cv::Mat &im, FaceARParams * params ,cv::Rect rect);
-    int NewFrame(cv::Mat &im,FaceARParams* params=NULL); //additinal parameters
+    int trackerWithRect(cv::Mat &im, FaceTrackerParams * params ,cv::Rect rect);
+    int NewFrame(cv::Mat &im,FaceTrackerParams* params=NULL); //additinal parameters
     void 
     Read(std::ifstream &s,      //file stream to read from
 	 bool readType = true); //read type?
@@ -81,7 +81,7 @@ namespace FACETRACKER
     cv::Rect rect_; cv::Mat gray_,mu_,cov_,covi_,smooth_,dxdp_;
   };
   //============================================================================
-  class myFaceARParams : public FaceARParams {
+  class myFaceTrackerParams : public FaceTrackerParams {
   public:
     int type;               /**< Type of object                           */
     int timeDet;            /**< Time between detections (seconds)        */
@@ -111,8 +111,8 @@ namespace FACETRACKER
     double ksmooth_thresh; /**< Update threshold for ksmooth   */
     int ksmooth_ntemp;     /**< Number of templates in ksmooth */
 
-    myFaceARParams();
-    myFaceARParams(const char* fname, bool binary = false){this->Load(fname, binary);}
+    myFaceTrackerParams();
+    myFaceTrackerParams(const char* fname, bool binary = false){this->Load(fname, binary);}
     void Save(const char* fname, bool binary = false);
     void Load(const char* fname, bool binary = false);
   };

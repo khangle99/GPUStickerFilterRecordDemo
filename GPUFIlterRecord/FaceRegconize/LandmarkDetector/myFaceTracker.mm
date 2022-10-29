@@ -17,7 +17,7 @@
 
 // Copyright CSIRO 2013
 
-#include "myFaceAR.h"
+#include "myFaceTracker.h"
 #include <iostream>
 #include <Foundation/Foundation.h>
 #define it at<int>
@@ -29,10 +29,10 @@ struct myInitData{
     bool calculate; cv::Mat mu,cov,covi; //praFacePredictor *pra;
 };
 struct myTrackData1{
-    cv::Mat img; myFaceAR* tracker;
+    cv::Mat img; myFaceTracker* tracker;
 };
 struct myTrackData2{
-    bool calculate; cv::Mat mu,cov,covi,img; myFaceAR* tracker; double gamma;
+    bool calculate; cv::Mat mu,cov,covi,img; myFaceTracker* tracker; double gamma;
 };
 //==============================================================================
 void myInitFunc(cv::Mat &/*im*/,   //image containing object
@@ -92,9 +92,9 @@ void myTrackFunc2(cv::Mat &/*im*/,   //image containing object
 //=============================================================================
 //=============================================================================
 //=============================================================================
-myFaceARParams::myFaceARParams()
+myFaceTrackerParams::myFaceTrackerParams()
 {
-    type = IO::MYFACEARPARAMS;
+    type = IO::MYFACETRACKERPARAMS;
     init_wSize.resize(3); init_wSize[0] = 11; init_wSize[1] = 9; init_wSize[2]=7;
     track_wSize.resize(1); track_wSize[0] = 7;
     timeDet = -1;
@@ -134,7 +134,7 @@ myFaceARParams::myFaceARParams()
     visi.resize(0);
 }
 //=============================================================================
-void myFaceARParams::Save(const char* fname, bool binary)
+void myFaceTrackerParams::Save(const char* fname, bool binary)
 {
     ofstream file;
     if(!binary) file.open(fname);
@@ -142,7 +142,7 @@ void myFaceARParams::Save(const char* fname, bool binary)
     assert(file.is_open());
     
     if(!binary){
-        file << IO::MYFACEARPARAMS << " "
+        file << IO::MYFACETRACKERPARAMS << " "
         << timeDet << " "
         << itol << " "
         << ftol << " "
@@ -174,7 +174,7 @@ void myFaceARParams::Save(const char* fname, bool binary)
         << ksmooth_ntemp << " ";
     }
     else{
-        int t = IOBinary::MYFACEARPARAMS;
+        int t = IOBinary::MYFACETRACKERPARAMS;
         file.write(reinterpret_cast<char*>(&t), sizeof(t));
         file.write(reinterpret_cast<char*>(&timeDet), sizeof(timeDet));
         file.write(reinterpret_cast<char*>(&itol), sizeof(itol));
@@ -226,12 +226,12 @@ void myFaceARParams::Save(const char* fname, bool binary)
     file.close();
 }
 //=============================================================================
-void myFaceARParams::Load(const char* fname, bool binary)
+void myFaceTrackerParams::Load(const char* fname, bool binary)
 {
     ifstream file;
     if(!binary){
         file.open(fname);  assert(file.is_open());
-        int t; file >> t; assert(t == IO::MYFACEARPARAMS);
+        int t; file >> t; assert(t == IO::MYFACETRACKERPARAMS);
         
         file >> timeDet
         >> itol
@@ -266,7 +266,7 @@ void myFaceARParams::Load(const char* fname, bool binary)
         file.open(fname, std::ios::binary);
         {int type;
             file.read(reinterpret_cast<char*>(&type), sizeof(type));
-            assert(type == IOBinary::MYFACEARPARAMS);
+            assert(type == IOBinary::MYFACETRACKERPARAMS);
         }
         file.read(reinterpret_cast<char*>(&timeDet), sizeof(timeDet));
         file.read(reinterpret_cast<char*>(&itol), sizeof(itol));
@@ -328,7 +328,7 @@ void myFaceARParams::Load(const char* fname, bool binary)
 //=============================================================================
 //=============================================================================
 //=============================================================================
-myFaceAR::myFaceAR(const char* clmFile,
+myFaceTracker::myFaceTracker(const char* clmFile,
                              const char* sInitFile,
                              const char* FcheckFile,
                              //		     const char* praFile,
@@ -343,14 +343,14 @@ myFaceAR::myFaceAR(const char* clmFile,
 }
 //=============================================================================
 void
-myFaceAR::Reset()
+myFaceTracker::Reset()
 {
     _time = -1; _atm._init = false; backgroundUPing = false;
     R = cv::Rect(0,0,0,0);
 }
 //=============================================================================
 std::vector<cv::Point_<double> >
-myFaceAR::getShape() const
+myFaceTracker::getShape() const
 {
     const int n = _shape.rows / 2;
     std::vector<cv::Point_<double> > rv(n);
@@ -366,21 +366,21 @@ myFaceAR::getShape() const
 }
 //=============================================================================
 
-int myFaceAR::trackerWithRect(cv::Mat &im, FaceARParams * params ,cv::Rect rect)
+int myFaceTracker::trackerWithRect(cv::Mat &im, FaceTrackerParams * params ,cv::Rect rect)
 {
      _timer.start_frame();
     int64 e1, e2;float t;
     e1 = cv::getTickCount();
 
     //set parameters
-    myFaceARParams* p = 0;
+    myFaceTrackerParams* p = 0;
     bool release=false;
     if (params != NULL){
-        p = dynamic_cast<myFaceARParams *>(params);
+        p = dynamic_cast<myFaceTrackerParams *>(params);
     }
     
     if (!p) {
-        p = new myFaceARParams();
+        p = new myFaceTrackerParams();
         release=true;
     }
     
@@ -402,7 +402,7 @@ int myFaceAR::trackerWithRect(cv::Mat &im, FaceARParams * params ,cv::Rect rect)
                 delete p;
             }
             Reset();
-            return FaceAR::TRACKER_FAILED;
+            return FaceTracker::TRACKER_FAILED;
         }
         _time = cvGetTickCount();
         R = rect;
@@ -490,7 +490,7 @@ int myFaceAR::trackerWithRect(cv::Mat &im, FaceARParams * params ,cv::Rect rect)
         
         //report when not all points are within the frame
         if(i < n)
-            health = FaceAR::TRACKER_FACE_OUT_OF_FRAME;
+            health = FaceTracker::TRACKER_FACE_OUT_OF_FRAME;
         else
             health = _fcheck.Check(gray_,_shape,_clm.GetViewIdx());
     } else {
@@ -510,7 +510,7 @@ int myFaceAR::trackerWithRect(cv::Mat &im, FaceARParams * params ,cv::Rect rect)
         _time = -1;
         if(release)
             delete p;
-        return FaceAR::TRACKER_FAILED;
+        return FaceTracker::TRACKER_FAILED;
     }
     static dispatch_queue_t serialQueue;
     if(!serialQueue){
@@ -559,27 +559,27 @@ int myFaceAR::trackerWithRect(cv::Mat &im, FaceARParams * params ,cv::Rect rect)
     }
     if(trackFailureCount > 5){
         Reset();
-        return FaceAR::TRACKER_FAILED;
+        return FaceTracker::TRACKER_FAILED;
     }
      _timer.stop_frame();
     return health;
 }
 
-int myFaceAR::NewFrame(cv::Mat &im,
-                            FaceARParams * params)
+int myFaceTracker::NewFrame(cv::Mat &im,
+                            FaceTrackerParams * params)
 {
     int64 e1, e2;float t;
     e1 = cv::getTickCount();
  
     //set parameters
-    myFaceARParams* p = 0;
+    myFaceTrackerParams* p = 0;
     bool release=false;
     if (params != NULL){
-        p = dynamic_cast<myFaceARParams *>(params);
+        p = dynamic_cast<myFaceTrackerParams *>(params);
     }
     
     if (!p) {
-        p = new myFaceARParams();
+        p = new myFaceTrackerParams();
         release=true;
     }
     
@@ -605,7 +605,7 @@ int myFaceAR::NewFrame(cv::Mat &im,
             if(release){
                 delete p;
             }
-            return FaceAR::TRACKER_FAILED;
+            return FaceTracker::TRACKER_FAILED;
         }
         _time = cvGetTickCount();
         gen = true;
@@ -694,7 +694,7 @@ int myFaceAR::NewFrame(cv::Mat &im,
         
         //report when not all points are within the frame
         if(i < n)
-            health = FaceAR::TRACKER_FACE_OUT_OF_FRAME;
+            health = FaceTracker::TRACKER_FACE_OUT_OF_FRAME;
         else
             health = _fcheck.Check(gray_,_shape,_clm.GetViewIdx());
     } else {
@@ -714,7 +714,7 @@ int myFaceAR::NewFrame(cv::Mat &im,
         _time = -1;
         if(release)
             delete p;
-        return FaceAR::TRACKER_FAILED;
+        return FaceTracker::TRACKER_FAILED;
     }
     
     if (p->track_type > 0) {
@@ -772,7 +772,7 @@ int myFaceAR::NewFrame(cv::Mat &im,
     return health;
 }
 
-std::vector<cv::Point3_<double> > myFaceAR::get3DShape() const
+std::vector<cv::Point3_<double> > myFaceTracker::get3DShape() const
 {
     const int n = _shape.rows / 2;
     std::vector<cv::Point3_<double> > rv(n);
@@ -792,7 +792,7 @@ std::vector<cv::Point3_<double> > myFaceAR::get3DShape() const
     return rv;
 }
 //=============================================================================
-Pose myFaceAR::getPose() const
+Pose myFaceTracker::getPose() const
 {
     Pose rv;
     rv.pitch = _clm._pglobl.db(1,0);
@@ -802,11 +802,11 @@ Pose myFaceAR::getPose() const
 }
 
 //=============================================================================
-void myFaceAR::Read(ifstream &s,
+void myFaceTracker::Read(ifstream &s,
                     bool readType)
 {
     int type;
-    if(readType){s >> type; assert(type == IO::MYFACEAR);}
+    if(readType){s >> type; assert(type == IO::MYFACETRACKER);}
     
     _clm.Read(s); _sinit.Read(s); _fcheck.Read(s);
     //_pra.Read(s);
@@ -817,12 +817,12 @@ void myFaceAR::Read(ifstream &s,
     covi_.create(2*n,2*n,CV_64F); return;
 }
 //=============================================================================
-void myFaceAR::ReadBinary(ifstream &s,
+void myFaceTracker::ReadBinary(ifstream &s,
                           bool readType)
 {
     if(readType){int type;
         s.read(reinterpret_cast<char*>(&type), sizeof(type));
-        assert(type == IOBinary::MYFACEAR);
+        assert(type == IOBinary::MYFACETRACKER);
     }
     
     _clm.ReadBinary(s);
@@ -836,12 +836,12 @@ void myFaceAR::ReadBinary(ifstream &s,
     covi_.create(2*n,2*n,CV_64F); return;
 }
 //=============================================================================
-void myFaceAR::Write(ofstream &s, bool binary)
+void myFaceTracker::Write(ofstream &s, bool binary)
 {
     if(!binary)
-        s << IO::MYFACEAR<< " ";
+        s << IO::MYFACETRACKER<< " ";
     else{
-        int t = IOBinary::MYFACEAR;
+        int t = IOBinary::MYFACETRACKER;
         s.write(reinterpret_cast<char*>(&t), sizeof(t));
     }
     // int k=0;
