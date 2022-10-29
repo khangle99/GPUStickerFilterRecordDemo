@@ -348,7 +348,8 @@ myFaceTracker::myFaceTracker(const char* clmFile,
 void
 myFaceTracker::Reset()
 {
-  _time = -1; _atm._init = false;
+    _time = -1; _atm._init = false;
+    R = cv::Rect(0,0,0,0);
 }
 //=============================================================================
 std::vector<cv::Point_<double> >
