@@ -1,4 +1,4 @@
-// CSIRO has filed various patents which cover the Software. 
+// CSIRO has filed various patents which cover the Software.
 
 // CSIRO grants to you a license to any patents granted for inventions
 // implemented by the Software for academic, research and non-commercial
@@ -43,16 +43,15 @@ namespace FACETRACKER
     int trackFailureCount;
     bool backgroundUPing;
     bool trackIng;
-//    dispatch_queue_t serialQueue;
       
     myFaceTracker(){_time=-1;}
     myFaceTracker(const char* fname, bool binary = false){this->Load(fname, binary);}
     myFaceTracker(const char* clmFile,     //CLM
-		  const char* sInitFile,   //SInit
-		  const char* FcheckFile,  //RegistrationCheck
-		  //		  const char* praFile,     //praFacePredictor
-		  const char* predFile,   //ShapePredictor
-		  bool binary = false); // if the files are binary
+          const char* sInitFile,   //SInit
+          const char* FcheckFile,  //RegistrationCheck
+          //          const char* praFile,     //praFacePredictor
+          const char* predFile,   //ShapePredictor
+          bool binary = false); // if the files are binary
     void Reset(); //reset tracker
 
     std::vector<cv::Point_<double> > getShape() const;
@@ -60,17 +59,19 @@ namespace FACETRACKER
     Pose getPose() const;
     
     int trackerWithRect(cv::Mat &im, FaceTrackerParams * params ,cv::Rect rect);
-    int NewFrame(cv::Mat &im,FaceTrackerParams* params=NULL); //additinal parameters
-    void 
+    int                          //-1 on failure, 0 otherwise
+    NewFrame(cv::Mat &im,        //grayscale image to track
+         FaceTrackerParams* params=NULL); //additinal parameters
+    void
     Read(std::ifstream &s,      //file stream to read from
-	 bool readType = true); //read type?
-    void 
+     bool readType = true); //read type?
+    void
     ReadBinary(std::ifstream &s,      //file stream to read from
-	       bool readType = true); //read type?
+           bool readType = true); //read type?
 
-    void 
+    void
     Write(std::ofstream &s,    //file stream to write to
-	  bool binary = false);
+      bool binary = false);
 
     const cv::Mat mu(){return mu_;}
     const cv::Mat cov(){return cov_;}
@@ -98,7 +99,7 @@ namespace FACETRACKER
     std::vector<int> init_wSize; /**< CLM search window sizes             */
     std::vector<int> track_wSize; /**< CLM search window sizes            */
     std::vector<cv::Mat> center; /**< Center view poses                   */
-    std::vector<cv::Mat> visi;   /**< Shape model clamping factor */
+    std::vector<cv::Mat> visi;   /**< Patch visibility while tracking */
 
     cv::Mat atm_tri;        /**< Triangulation for ATM      */
     double atm_scale;       /**< Scale of ATM               */
